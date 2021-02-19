@@ -14,14 +14,11 @@ end
 def get_japanese_emoticon(path, emoticon)
   library=load_library(path)
   library.each do |key, value|
-    binding.pry
-    value.each do |language, emote|
       if emote.include?(emoticon)
         return value[:japanese]
       else
         return "Sorry, that emoticon was not found"
       end
-    end
   end 
   end
 
